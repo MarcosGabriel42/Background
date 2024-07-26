@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Foda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World!</h1>
+        <div class="campoForm" id="initialForm">
+            <form autocomplete="off" id="userForm">
+                <label for="name"></label>
+                <input class="forms" type="text" placeholder="Insira seu nome" id="name" name="name">
+                <br><br>
+                <label for="password"></label>
+                <input class="forms" type="password" placeholder="Insira sua senha" id="password" name="password">
+                <br><br>
+                <button class="button" type="submit">Confirmar</button>
+            </form>
+        </div>
+        <div class="result" id="result" style="display:none;">
+            <h2>Bem-Vindo!</h2>
+            <p id="resultContent"></p>
+        </div>
+        <div class="campoForm" id="gameForm" style="display:none;">
+            <p>Você está pronto para o jogo?</p>
+            <button class="button" id="yesButton">Sim</button>
+            <button class="button" id="noButton">Não</button>
+        </div>
+        <div class="result" id="finalResult" style="display:none;">
+            <h2>Resultado do Jogo</h2>
+            <p id="finalResultContent"></p>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'arista';
+    src: url('arista/Arista_Light_Trial.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+h2, p {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    letter-spacing: 10px; 
+}
+
+.button {
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: #49668d65;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.027);
+    padding: 15px 50px 15px 50px;
+    border: 0px;    
+}
+
+.button:hover {
+    background-color: #49668d99; 
+    color: #ffffff; 
+}
+
+.campoForm {
+    padding: 5px 10px 5px 10px;    
+
+}
+
+.forms {
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: #49668d65;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.027);
+    padding: 15px 20px 15px 20px;
+    border: 0px;
+    width: 250px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;    
+}
+
+.forms::placeholder {
+    color: #e7e7e7;
+    opacity: 1; 
+}
+
+.forms:hover {
+    background-color: #49668d99; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'arista', sans-serif;
+    background:
+        url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center,
+        url('images/estrela.png') repeat,
+        linear-gradient(#2b4e7a 65%, #ffa25a);
+    background-size:
+        auto,
+        contain, 
+        cover; 
+    z-index: 0;
+    position: relative; 
+}
+
+
+
+body::before, body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+body::before {
+    background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+    background-size: auto;
+    animation: twinkling 5s infinite alternate;
+}
+
+body::after {
+    background: transparent url('http://www.script-tutorials.com/demos/360/images/clouds3.png') repeat top center;
+    background-size: cover; 
+    animation: move-clouds-back 1000s linear infinite;
+}
+
+
+
+@keyframes twinkling {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes move-clouds-back {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 10000px 0; 
+    }
+}
+
+.container {
+    text-align: center;
+}
+
