@@ -25,20 +25,44 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
             document.getElementById('gameForm').style.display = 'block';
         }, 2000); // Tempo de exibição do primeiro resultado
     } else {
-        alert("Preencha todos os campos para continuar.");
+        alert("Quer passar sem preencher todos os campos? preenche ai mano.");
     }
 });
 
 document.getElementById('yesButton').addEventListener('click', function() {
-    showGameResult('x');
+    playGame('yes');
 });
 
 document.getElementById('noButton').addEventListener('click', function() {
-    showGameResult('y');
+    playGame('no');
 });
 
-function showGameResult(result) {
+function playGame(option) {
+    const name = localStorage.getItem('name');
+    let message = "";
+
+    if (option === 'yes') {
+        message = `
+            Isso é ótimo <strong>${name}</strong>, continue assim!
+        `;
+    } else if (option === 'no') {
+        message = `
+            Quer morrer <strong>${name}</strong>?<br>
+            ........................./´¯/)<br>
+            ......................,/¯..// <br>
+            ...................../..../ /<br> 
+            ............./´¯/´...´´/´¯¯\`·¸<br> 
+            ........../´/.../..../......./¨¯\\<br>
+            ........(´(...´(..´......,~/´...´)<br>
+            .........\\.................\\/..../ <br>
+            ..........´´...\\.......... _.·´ <br>
+            ............\\..............( <br>
+            ..............\\.............\\ <br>
+            .......<br>
+        `;
+    }
+
     document.getElementById('gameForm').style.display = 'none';
-    document.getElementById('finalResultContent').innerText = `Sua resposta é: ${result}`;
+    document.getElementById('finalResultContent').innerHTML = message;
     document.getElementById('finalResult').style.display = 'block';
 }
